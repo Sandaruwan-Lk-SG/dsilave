@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>පද්ධතියට පිවිසෙන්න</title>
+    <title>පද්ධතියට පිවිසෙන්න</title> 
     <link rel="stylesheet" href="styles.css">
-    <style> /* Login-specific styles (auth-container) */ </style>
+    <style> 
+        /* Login-specific styles (auth-container) */ 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="auth-container" style="margin-top: 15vh;">
+    <div class="auth-container" style="margin-top: 0;">
         <h2>පද්ධතියට පිවිසෙන්න</h2>
         <form id="loginForm" action="/api/auth/login" method="POST">
             <div class="form-group"><label for="username">පරිශීලක නාමය / EPF අංකය:</label><input type="text" id="username" name="username" required></div>
