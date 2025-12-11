@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>පද්ධතියට පිවිසෙන්න</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> /* Login-specific styles (auth-container) */ </style>
+</head>
+<body>
+    <div class="auth-container" style="margin-top: 15vh;">
+        <h2>පද්ධතියට පිවිසෙන්න</h2>
+        <form id="loginForm" action="/api/auth/login" method="POST">
+            <div class="form-group"><label for="username">පරිශීලක නාමය / EPF අංකය:</label><input type="text" id="username" name="username" required></div>
+            <div class="form-group"><label for="password">මුරපදය:</label><input type="password" id="password" name="password" required></div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">පිවිසෙන්න</button>
+        </form>
+
+        <div class="registration-section" style="margin-top: 25px; text-align: center;">
+            <h4 style="margin-bottom: 10px;">ලියාපදිංචි වීම</h4>
+            <div style="display: flex; justify-content: space-around; gap: 10px;">
+                <a href="employee_registration.html" class="btn" style="background-color: var(--bg-light); color: var(--color-primary);">සේවක (Employee)</a>
+                <a href="hod_registration.html" class="btn" style="background-color: var(--bg-light); color: var(--color-hod);">දෙපාර්තමේන්තු ප්‍රධානියා (HOD)</a>
+            </div>
+            <p style="font-size: 0.8em; color: var(--color-danger); margin-top: 10px;">
+                ⚠️ සියලුම නව ගිණුම් පරිපාලක විසින් අනුමත කළ යුතුය.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
