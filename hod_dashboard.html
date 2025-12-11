@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD අනුමැති Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style> .header { background-color: var(--color-hod); } </style>
+</head>
+<body>
+    <header class="header">
+        <h1>දෙපාර්තමේන්තු ප්‍රධානියාගේ Dashboard</h1>
+        <span>දෙපාර්තමේන්තුව: IT | ප්‍රධානියා: [HOD නම]</span>
+        <div><a href="login.html">ලොග් අවුට්</a></div>
+    </header>
+
+    <div class="container">
+        <div class="form-panel">
+            <h2>අනුමැතිය සඳහා ඇති නිවාඩු ඉල්ලීම් (Pending Requests)</h2>
+            <p style="color: var(--color-danger); font-weight: 600;">⚠️ ඔබගේ තීරණය අවසන් තීරණයයි!</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr><th>ID</th><th>සේවකයා</th><th>වේලාව</th><th>හේතුව</th><th>ක්‍රියාකාරීත්වය</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="ID">001A</td>
+                        <td data-label="සේවකයා">නදීෂා කුමාරි</td>
+                        <td data-label="වේලාව">11:00 - 13:00</td>
+                        <td data-label="හේතුව">පුද්ගලික හමුවීමක්</td>
+                        <td data-label="ක්‍රියාකාරීත්වය" class="action-buttons">
+                            <button class="btn btn-success">අනුමත කරන්න</button> 
+                            <button class="btn btn-danger">ප්‍රතික්ෂේප කරන්න</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
