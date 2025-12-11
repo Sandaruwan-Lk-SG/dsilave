@@ -1,0 +1,230 @@
+/* ---------------------------------------------------- */
+/* Global Styles (සියල්ලටම පොදු) */
+/* ---------------------------------------------------- */
+:root {
+    --color-primary: #3498db; /* Blue */
+    --color-secondary: #2c3e50; /* Dark Blue */
+    --color-success: #2ecc71; /* Green */
+    --color-danger: #e74c3c; /* Red */
+    --color-warning: #f39c12; /* Yellow/Appeal */
+    --color-hod: #009688; /* HOD Green */
+    --color-security: #7f8c8d; /* Security Grey */
+    --bg-light: #ecf0f1;
+    --bg-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    color: var(--color-secondary);
+}
+
+/* ---------------------------------------------------- */
+/* Container & Forms */
+/* ---------------------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.auth-container, .form-panel {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+}
+.auth-container { max-width: 450px; }
+
+h1, h2, h3 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* ---------------------------------------------------- */
+/* Buttons */
+/* ---------------------------------------------------- */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary { background-color: var(--color-primary); color: white; }
+.btn-primary:hover { background-color: #2980b9; }
+
+.btn-success { background-color: var(--color-success); color: white; }
+.btn-success:hover { background-color: #27ae60; }
+
+.btn-danger { background-color: var(--color-danger); color: white; }
+.btn-danger:hover { background-color: #c0392b; }
+
+.btn-warning { background-color: var(--color-warning); color: white; }
+.btn-warning:hover { background-color: #e67e22; }
+
+/* ---------------------------------------------------- */
+/* Header & Navigation */
+/* ---------------------------------------------------- */
+.header {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 { color: white; font-size: 1.4em; margin: 0; }
+
+.header a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+/* ---------------------------------------------------- */
+/* Tables and Status Badges */
+/* ---------------------------------------------------- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.data-table th, .data-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.status-badge {
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.status-pending { background-color: var(--color-warning); color: white; }
+.status-approved { background-color: var(--color-success); color: white; }
+.status-rejected { background-color: var(--color-danger); color: white; }
+.status-appeal { background-color: #9b59b6; color: white; } /* Appeal Status */
+.status-active { background-color: var(--color-primary); color: white; }
+.status-inactive { background-color: var(--color-secondary); color: white; }
+
+/* ---------------------------------------------------- */
+/* Media Queries for Mobile Responsiveness */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* General Adjustments */
+    .container {
+        margin-top: 0;
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        position: static; /* Mobile එකේදී Header එක ස්ථිර නොකරමු */
+    }
+
+    .header h1 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .header a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    .auth-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    /* Table Responsiveness */
+    .data-table thead {
+        display: none; /* Mobile එකේදී Header සඟවන්න */
+    }
+
+    .data-table, .data-table tbody, .data-table tr, .data-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .data-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .data-table td::before {
+        content: attr(data-label); /* Table Header Display */
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: var(--color-secondary);
+    }
+    
+    .action-buttons button {
+        margin-top: 5px;
+        width: 100%;
+    }
+  }
