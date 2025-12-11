@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ආරක්ෂක කාමර Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> .header { background-color: var(--color-security); } </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🚨 ආරක්ෂක කාමර Dashboard</h1>
+        <div><a href="login.html">ලොග් අවුට්</a></div>
+    </header>
+
+    <div class="container">
+        <div class="form-panel">
+            <h2>🚪 සේවක පිටවීම සහ නැවත පැමිණීම තහවුරු කිරීම</h2>
+            <div class="search-form" style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="epfSearch" placeholder="සේවක EPF අංකය/ID ඇතුළත් කරන්න" style="flex-grow: 1;">
+                <button onclick="searchEmployeeForConfirmation()" class="btn btn-primary">සොයන්න</button>
+            </div>
+
+            <div id="confirmationArea" style="border: 1px dashed var(--color-security); padding: 15px; border-radius: 6px; display: none;">
+                <h3 style="color: var(--color-secondary);">තහවුරු කිරීමට ඇති ඉල්ලීම</h3>
+                <div style="margin-bottom: 15px;"><label style="font-weight: bold;">නිවාඩු වේලාව (නියමිත):</label><span id="displayLeaveTime">14:00 සිට 16:00 දක්වා</span></div>
+                
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1 1 45%; padding: 10px; border: 1px solid var(--color-warning); border-radius: 5px;">
+                        <label style="font-weight: bold; color: var(--color-warning);">🚪 පිටව යන වේලාව:</label>
+                        <input type="text" id="systemTimeOut" value="[වර්තමාන වේලාව]" readonly style="margin-top: 5px;">
+                        <button id="confirmOutButton" onclick="confirmOutTime()" class="btn btn-warning" style="margin-top: 10px; width: 100%;">පිටවීම තහවුරු කරන්න</button>
+                    </div>
+                    
+                    <div style="flex: 1 1 45%; padding: 10px; border: 1px solid var(--color-success); border-radius: 5px;">
+                        <label style="font-weight: bold; color: var(--color-success);">✅ නැවත පැමිණෙන වේලාව:</label>
+                        <input type="text" id="systemTimeIn" value="[වර්තමාන වේලාව]" readonly style="margin-top: 5px;">
+                        <button id="confirmInButton" onclick="confirmInTime()" class="btn btn-success" style="margin-top: 10px; width: 100%;">නැවත පැමිණීම තහවුරු කරන්න</button>
+                    </div>
+                </div>
+                <p style="font-size: 0.8em; color: var(--color-danger); margin-top: 10px;">System Time එක ලංකාවේ වේලාවෙන් සටහන් වේ. වෙනස් කළ නොහැක.</p>
+            </div>
+        </div>
+
+        <div class="form-panel">
+            <h2>අද දින අනුමත නිවාඩු ලැයිස්තුව</h2>
+            <table class="data-table">
+                <thead><tr><th>EPF අංකය</th><th>සේවකයා</th><th>අවසන් වේලාව (Expected)</th><th>තත්ත්වය</th></tr></thead>
+                <tbody>
+                    <tr><td data-label="EPF අංකය">1001</td><td data-label="සේවකයා">නිරෝෂා කුමාරි</td><td data-label="අවසන් වේලාව">12:30</td><td data-label="තත්ත්වය"><span class="status-approved status-badge">පිටත</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script> /* JavaScript Logic for systemTime and confirmation functions */ </script>
+</body>
+</html>
