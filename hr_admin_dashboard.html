@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR / Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> .header { background-color: var(--color-secondary); } </style>
+</head>
+<body>
+    <header class="header">
+        <h1>⚙️ HR / Admin Dashboard</h1>
+        <div>
+            <a href="reports_dashboard.html">වාර්තා</a>
+            <a href="login.html">ලොග් අවුට්</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="form-panel">
+            <h2>නව ගිණුම් අනුමැතිය</h2>
+            <table class="data-table">
+                <thead><tr><th>නම</th><th>EPF / ID</th><th>දෙපාර්තමේන්තුව</th><th>භූමිකාව</th><th>ක්‍රියාකාරීත්වය</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="නම">සමන්ති පෙරේරා</td>
+                        <td data-label="EPF / ID">HOD-105</td>
+                        <td data-label="දෙපාර්තමේන්තුව">මූල්‍ය</td>
+                        <td data-label="භූමිකාව"><span class="status-active status-badge">HOD</span></td>
+                        <td data-label="ක්‍රියාකාරීත්වය" class="action-buttons">
+                            <button class="btn btn-success">අනුමත කරන්න</button>
+                            <button class="btn btn-danger">ප්‍රතික්ෂේප කරන්න</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="form-panel" style="border-left: 5px solid var(--color-warning);">
+            <h2>🛡️ අභියාචනා ඉල්ලීම් (Appeal Requests)</h2>
+            <p>ප්‍රතික්ෂේප වූ නිවාඩු ඉල්ලීම් සම්බන්ධයෙන් සේවකයන් විසින් ඉදිරිපත් කළ අභියාචනා.</p>
+            
+            <table class="data-table">
+                <thead><tr><th>ID</th><th>සේවකයා</th><th>HOD තීරණය</th><th>අභියාචනය</th><th>ක්‍රියාකාරීත්වය</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="ID">L-0088</td>
+                        <td data-label="සේවකයා">කසුන් රණසිංහ</td>
+                        <td data-label="HOD තීරණය">ප්‍රතික්ෂේපයි (2025-12-10)</td>
+                        <td data-label="අභියාචනය">රෝහල් හමුවීමක් නිසා. (බලන්න)</td>
+                        <td data-label="ක්‍රියාකාරීත්වය" class="action-buttons">
+                            <button class="btn btn-warning">FM වෙත යොමු කරන්න</button> 
+                            <button class="btn btn-danger">අභියාචනය ප්‍රතික්ෂේප කරන්න</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="form-panel">
+            <h2>පරිපාලන මෙවලම්</h2>
+            <a href="admin_department_setup.html" class="btn btn-primary">🏢 දෙපාර්තමේන්තු Setup</a>
+        </div>
+    </div>
+</body>
+</html>
